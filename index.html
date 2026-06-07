@@ -1,0 +1,169 @@
+=“73184”}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup Date Application</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+.card{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:24px;
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+h1{
+    margin-bottom:15px;
+    font-size:2.3rem;
+}
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+.details{
+    text-align:left;
+    margin:25px auto;
+    max-width:500px;
+    line-height:1.8;
+}
+.buttons{
+    margin-top:30px;
+    position:relative;
+    height:120px;
+}
+button{
+    border:none;
+    padding:15px 28px;
+    border-radius:999px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.2s;
+}
+#yesBtn{
+    background:#22c55e;
+    color:white;
+}
+#noBtn{
+    background:#ef4444;
+    color:white;
+    position:absolute;
+}
+button:hover{
+    transform:scale(1.05);
+}
+#result{
+    margin-top:25px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+.success{
+    animation:pop .4s ease;
+}
+@keyframes pop{
+    0%{transform:scale(.5);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>⚽ World Cup Opening Match Date Application</h1>
+<p class="subtitle">
+A very important invitation requiring your immediate attention.
+</p>
+<div class="details">
+<p>📅 Event: World Cup Opening Match</p>
+<p>🍟 Includes: Snacks, football, unnecessary commentary, and premium company.</p>
+<p>🎯 Mission Objectives:</p>
+<ul style="margin-left:20px;margin-top:10px;">
+<li>Watch football</li>
+<li>Pretend we understand every referee decision</li>
+<li>Celebrate goals dramatically</li>
+<li>Create a fun memory together</li>
+</ul>
+</div>
+<h2 style="margin-top:20px;">
+Would you like to attend with me?
+</h2>
+<div class="buttons">
+<button id="yesBtn">💖 Yes, I'd love to!</button>
+<button id="noBtn">😒 No</button>
+</div>
+<div id="result"></div>
+</div>
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const result = document.getElementById("result");
+const messages = [
+"Are you sure? 🤨",
+"Really sure? 😏",
+"The referee disagrees. ⚽",
+"Football is disappointed. 😔",
+"VAR is checking your decision... 📺",
+"Still no? That's suspicious. 👀",
+"Just click Yes 😭"
+];
+let counter = 0;
+noBtn.style.left = "55%";
+noBtn.style.top = "20px";
+function moveButton(){
+    const maxX = window.innerWidth - 150;
+    const maxY = window.innerHeight - 100;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+    noBtn.style.position = "fixed";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+    if(counter < messages.length){
+        noBtn.innerText = messages[counter];
+        counter++;
+    }
+}
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("click", moveButton);
+yesBtn.addEventListener("click", () => {
+document.querySelector(".card").innerHTML = `
+<div class="success">
+<h1>🎉 Application Approved!</h1>
+<h2 style="margin-top:20px;">
+Congratulations!
+</h2>
+<p style="margin-top:20px;font-size:1.2rem;line-height:1.8;">
+Your application to attend the World Cup Opening Match Date
+has been officially approved.
+</p>
+<p style="margin-top:20px;">
+⚽ Snacks will be shared.<br>
+⚽ Referees will be judged.<br>
+⚽ Memories will be created.
+</p>
+<p style="margin-top:30px;font-size:1.4rem;">
+See you on match day ❤️
+</p>
+</div>
+`;
+});
+</script>
+
+</bod
