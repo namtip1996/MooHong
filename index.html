@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Cup Date Application</title>
+<title>ไปดูบอลโลกกันไหมจ้ะ</title>
 <style>
 *{
     margin:0;
@@ -87,23 +85,20 @@ button:hover{
 </head>
 <body>
 <div class="card">
-<h1>⚽ World Cup Opening Match Date Application</h1>
+<h1>⚽ ไปดูบอลโลกกันไหมจ้ะ</h1>
 <p class="subtitle">
-A very important invitation requiring your immediate attention.
+คิดดีๆนะน้อง
 </p>
 <div class="details">
 <p>📅 Event: World Cup Opening Match</p>
-<p>🍟 Includes: Snacks, football, unnecessary commentary, and premium company.</p>
+<p>🍟 Includes: ตัวและหัวจัย</p>
 <p>🎯 Mission Objectives:</p>
 <ul style="margin-left:20px;margin-top:10px;">
-<li>Watch football</li>
-<li>Pretend we understand every referee decision</li>
-<li>Celebrate goals dramatically</li>
-<li>Create a fun memory together</li>
+<li>รับชมกีฬามันส์ๆ</li>
 </ul>
 </div>
 <h2 style="margin-top:20px;">
-Would you like to attend with me?
+จะไปมิไป?
 </h2>
 <div class="buttons">
 <button id="yesBtn">💖 Yes, I'd love to!</button>
@@ -116,13 +111,13 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const result = document.getElementById("result");
 const messages = [
-"Are you sure? 🤨",
-"Really sure? 😏",
-"The referee disagrees. ⚽",
-"Football is disappointed. 😔",
-"VAR is checking your decision... 📺",
-"Still no? That's suspicious. 👀",
-"Just click Yes 😭"
+"คิดดีๆ 🤨",
+"อีกทีหน่า 😏",
+"ยังไงซิ ⚽",
+"ไม่ไปจิงหรอ 😔",
+"ขอประมวลผลแปป 📺",
+"ให้คิดอีกที 👀",
+"ไปเหอะน่า 😭"
 ];
 let counter = 0;
 noBtn.style.left = "55%";
@@ -147,19 +142,18 @@ document.querySelector(".card").innerHTML = `
 <div class="success">
 <h1>🎉 Application Approved!</h1>
 <h2 style="margin-top:20px;">
-Congratulations!
+เย้!
 </h2>
 <p style="margin-top:20px;font-size:1.2rem;line-height:1.8;">
-Your application to attend the World Cup Opening Match Date
-has been officially approved.
+ไว้เจอกันนะน้องนะ
 </p>
 <p style="margin-top:20px;">
-⚽ Snacks will be shared.<br>
-⚽ Referees will be judged.<br>
-⚽ Memories will be created.
+⚽ ps.  <br>
+⚽ สะสมเพิ่ม1ฟอด<br>
+⚽ ปลดล็อกทันทีจุบุทองคำ
 </p>
 <p style="margin-top:30px;font-size:1.4rem;">
-See you on match day ❤️
+เจอกันกรั่กๆ ❤️
 </p>
 </div>
 `;
